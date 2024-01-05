@@ -1,0 +1,18 @@
+
+.text-fields {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.input-field {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.input {
+    padding: 5px;
+    margin: 3px;
+}
