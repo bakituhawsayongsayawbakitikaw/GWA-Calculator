@@ -15,6 +15,7 @@
                 <h1>GWA Calculator</h1>
             </div>
         </div>
+
         <div class="column">
             <div class="column-container">
                 <div class="column-names">Subject Names</div>
@@ -23,14 +24,17 @@
             </div>
         </div>
         
-        <div class="input" >
-            <div class="input-container">
-                <input type="text" class="fields">
-                <input type="number" class="fields">
-                <input type="number" class="fields">
-                <button class="del-but">X</button>
+        <form class="input-row">
+            <div class="input" >
+                <div class="input-container">
+                    <input type="text" name="subject" class="fields">
+                    <input type="number" min="1" max="5" name="unit" class="fields">
+                    <input type="number" name="grade" class="fields">
+                    <button class="del-but">X</button>
+                </div>
             </div>
-        </div>
+        </form>
+        
 
         <div class="button">
             <div class="button-container">
@@ -51,6 +55,7 @@
 
     </div>
     
+    <script src="index.js"></script>
 
 </body>
 </html>
