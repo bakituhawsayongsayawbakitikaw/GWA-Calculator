@@ -4,43 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>GWA Calculator</title>
+    <title>Test</title>
 </head>
 <body>
     
-    <div class="container">
-        <div class="flex-container">
-            <h1>GWA Calculator</h1>
-        </div>
-    </div>
+    <div class="background">
 
-    <div class="container">
-        <form>
-            <div class="text-fields">
-                <div class="input-field">
-                    <label>Class Names</label>
-                    <input type="number" class="input">
-                    <input type="number" class="input">
-                    <input type="number" class="input">
-                </div>
-                <div class="input-field">
-                    <label>Number of Units</label>
-                    <input type="number" class="input">
-                    <input type="number" class="input">
-                    <input type="number" class="input">
-                </div>
-                <div class="input-field">
-                    <label>Grades Obtained</label>
-                    <input type="number" class="input">
-                    <input type="number" class="input">
-                    <input type="number" class="input">
-                </div>
-
+        <div class="header">
+            <div class="header-container">
+                <h1>GWA Calculator</h1>
             </div>
-        </form>   
+        </div>
+        <div class="column">
+            <div class="column-container">
+                <div class="column-names">Subject Names</div>
+                <div class="column-names">Number of Units</div>
+                <div class="column-names">Grades Obtained</div>
+            </div>
+        </div>
+        
+        <div class="input" >
+            <div class="input-container">
+                <input type="text" class="fields">
+                <input type="number" class="fields">
+                <input type="number" class="fields">
+                <button class="del-but">X</button>
+            </div>
+        </div>
+
+        <div class="button">
+            <div class="button-container">
+                <button class="add-but">Add Subject</button>
+                <p>Total Number of Units: 0</p>
+                
+                <div class="reset-compute-container">
+                    <p>GWA : 0</p>
+                    <div class="reset-compute">
+                        <button>Reset</button>
+                        <button>Compute</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
     </div>
-
-
+    
 
 </body>
 </html>
