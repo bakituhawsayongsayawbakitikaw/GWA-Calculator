@@ -1,7 +1,6 @@
 
 const btnAddSub = document.querySelector('.add-but')
 btnAddSub.addEventListener("click", addNewSub)
-
 function addNewSub() {
     const newForm = document.createElement('form')
     newForm.classList.add('input-row')
@@ -31,13 +30,19 @@ function removeSub( event ) {
     }
 }
 
-function reset() {
 
+const btnReset = document.querySelector('.reset-btn')
+btnReset.addEventListener("click", reset)
+function reset() {
+    const selectFields = document.querySelectorAll('.fields')
+
+    selectFields.forEach( fields => {
+        fields.value = ''
+    });
 }
 
 const btnCompute = document.querySelector('.compute-btn')
 btnCompute.addEventListener("click", compute)
-
 function compute() {
     const units = document.getElementsByClassName('unit-value')
 
