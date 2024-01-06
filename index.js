@@ -9,8 +9,8 @@ function addNewSub() {
         <div class="input" >
             <div class="input-container">
                 <input type="text" name="subject" class="fields">
-                <input type="number" min="1" max="5" name="unit" class="fields unit-value">
-                <input type="number" name="grade" class="fields grade-value">
+                <input type="number" min="1" max="5" name="unit" class="fields unit-value num-field">
+                <input type="number" name="grade" class="fields grade-value num-field">
                 <button class="del-but">X</button>
             </div>
         </div>
@@ -38,11 +38,15 @@ function reset() {
 
     selectFields.forEach( fields => {
         fields.value = ''
+        gpa.innerHTML = `GWA : 0`
+        totalUnitHTML.innerHTML = `Total Number of Units: 0`
     });
 }
 
 const btnCompute = document.querySelector('.compute-btn')
 btnCompute.addEventListener("click", compute)
+let gpa = document.getElementById('gwa-value')
+let totalUnitHTML = document.getElementById('units-total')
 function compute() {
     const units = document.getElementsByClassName('unit-value')
     const listOfUnits = []
@@ -56,7 +60,7 @@ function compute() {
         totalUnits += e
     });
 
-    let totalUnitHTML = document.getElementById('units-total')
+    
     totalUnitHTML.innerHTML = `Total Number of Units: ${totalUnits}`
     
 
@@ -74,7 +78,5 @@ function compute() {
     }
     
     finalGPA = gradeTotal / totalUnits
-
-    let gpa = document.getElementById('gwa-value')
-    gpa.innerHTML = `GWA : ${finalGPA}`
+    gpa.innerHTML = `GWA : ${finalGPA.toPrecision(5)}`
 }
