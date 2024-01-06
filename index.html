@@ -4,54 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Test</title>
+    <title>IMISSYOU</title>
 </head>
 <body>
     
     <div class="background">
-
-        <div class="header">
-            <div class="header-container">
+        <div class="container">
+            <div class="header">
                 <h1>GWA Calculator</h1>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="column-container">
-                <div class="column-names">Subject Names</div>
-                <div class="column-names">Number of Units</div>
-                <div class="column-names">Grades Obtained</div>
-            </div>
-        </div>
-        
-        <form class="input-row">
-            <div class="input" >
-                <div class="input-container">
-                    <input type="text" name="subject" class="fields">
-                    <input type="number" min="1" max="5" name="unit" class="fields">
-                    <input type="number" name="grade" class="fields">
-                    <button class="del-but">X</button>
+                <div class="card">
+                    <img class="card-image" src="wally.jpg" alt="muka mo">
                 </div>
             </div>
-        </form>
-        
-
-        <div class="button">
-            <div class="button-container">
-                <button class="add-but">Add Subject</button>
-                <p>Total Number of Units: 0</p>
-                
-                <div class="reset-compute-container">
-                    <p>GWA : 0</p>
-                    <div class="reset-compute">
-                        <button>Reset</button>
-                        <button>Compute</button>
-                    </div>
+            <div class="column">
+                <div class="column-container">
+                    <div class="column-names">Subject Names</div>
+                    <div class="column-names">Number of Units</div>
+                    <div class="column-names">Grades Obtained</div>
                 </div>
             </div>
             
+            <form class="input-row">
+                <div class="input" >
+                    <div class="input-container">
+                        <input type="text" name="subject" class="fields ">
+                        <input type="number" min="1" max="5" name="unit" class="fields unit-value num-field">
+                        <input type="number" name="grade" class="fields grade-value num-field">
+                        <button class="del-but">X</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="button">
+                <div class="button-container">
+                    <button class="add-but">Add Subject</button>
+                    <p id="units-total">Total Number of Units: 0</p>
+            
+                    <div class="reset-compute-container">
+                        <h3 id="gwa-value">GWA : 0</h3>
+                        <div class="reset-compute">
+                            <button class="reset-btn">Reset</button>
+                            <button class="compute-btn">Compute</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
         </div>
-
 
     </div>
     
