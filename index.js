@@ -10,7 +10,7 @@ function addNewSub() {
             <div class="input-container">
                 <input type="text" name="subject" class="fields">
                 <input type="number" min="1" max="5" name="unit" class="fields unit-value">
-                <input type="number" name="grade" class="fields">
+                <input type="number" name="grade" class="fields grade-value">
                 <button class="del-but">X</button>
             </div>
         </div>
@@ -45,7 +45,6 @@ const btnCompute = document.querySelector('.compute-btn')
 btnCompute.addEventListener("click", compute)
 function compute() {
     const units = document.getElementsByClassName('unit-value')
-
     const listOfUnits = []
     let totalUnits = 0
 
@@ -60,5 +59,22 @@ function compute() {
     let totalUnitHTML = document.getElementById('units-total')
     totalUnitHTML.innerHTML = `Total Number of Units: ${totalUnits}`
     
+
+    const grades = document.getElementsByClassName('grade-value')
+    const listOfGrades = []
+    let gradeTotal = 0
+    let finalGPA = 0
+
+    for(let i = 0; i < grades.length; i++) {
+        listOfGrades.push(parseFloat(grades[i].value))
+    }
+
+    for(let i = 0; i < grades.length; i++) {
+        gradeTotal += listOfUnits[i] * listOfGrades[i]  
+    }
+    
+    finalGPA = gradeTotal / totalUnits
+
+    let gpa = document.getElementById('gwa-value')
+    gpa.innerHTML = `GWA : ${finalGPA}`
 }
-// test commit
