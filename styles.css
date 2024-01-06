@@ -115,7 +115,7 @@
     background-color: #f7c207;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .container {
         width: 30rem;
     }
@@ -126,4 +126,4 @@
     .num-field {
         max-width: 50px;
     }
-}
+} */
