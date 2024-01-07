@@ -8,7 +8,7 @@ function addNewSub() {
     const newFields = `
         <div class="input" >
             <div class="input-container">
-                <input type="text" name="subject" class="fields">
+                <input type="text" name="subject" class="fields text-field">
                 <input type="number" min="1" max="5" name="unit" class="fields unit-value num-field">
                 <input type="number" name="grade" class="fields grade-value num-field">
                 <button class="del-but">X</button>
